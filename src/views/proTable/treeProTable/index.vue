@@ -1,23 +1,8 @@
 <template>
   <div class="main-box">
-    <TreeFilter
-      label="name"
-      title="部门列表(单选)"
-      :data="treeFilterData"
-      :default-value="initParam.departmentId"
-      @change="changeTreeFilter"
-    />
+    <TreeFilter label="name" title="部门列表(单选)" :data="treeFilterData" :default-value="initParam.departmentId" @change="changeTreeFilter" />
     <div class="table-box">
-      <ProTable
-        ref="proTable"
-        row-key="id"
-        :indent="20"
-        :columns="columns"
-        :request-api="getUserTreeList"
-        :request-auto="false"
-        :init-param="initParam"
-        :search-col="{ xs: 1, sm: 1, md: 2, lg: 3, xl: 3 }"
-      >
+      <ProTable ref="proTable" row-key="id" :indent="20" :columns="columns" :request-api="getUserTreeList" :request-auto="false" :init-param="initParam" :search-col="{ xs: 1, sm: 1, md: 2, lg: 3, xl: 3 }">
         <!-- 表格 header 按钮 -->
         <template #tableHeader>
           <el-button type="primary" :icon="CirclePlus" @click="openDrawer('新增')">新增用户</el-button>

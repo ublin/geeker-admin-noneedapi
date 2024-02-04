@@ -953,7 +953,7 @@ export const getUserGender = () => {
 };
 
 // 获取用户部门列表
-export const getUserDepartment = () => {
+export const getUserDepartment: any = () => {
   // return
   http.get<User.ResDepartment[]>(PORT1 + `/user/department`, {}, { cancel: false });
   return new Promise((resolve) => {
@@ -1035,7 +1035,7 @@ export const getUserDepartment = () => {
 };
 
 // 获取用户角色字典
-export const getUserRole = () => {
+export const getUserRole: any = () => {
   // return
   http.get<User.ResRole[]>(PORT1 + `/user/role`);
   return new Promise((resolve) => {

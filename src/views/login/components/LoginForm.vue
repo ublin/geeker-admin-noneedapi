@@ -42,7 +42,7 @@ import { initDynamicRouter } from "@/routers/modules/dynamicRouter";
 import { CircleClose, UserFilled } from "@element-plus/icons-vue";
 import type { ElForm } from "element-plus";
 // import md5 from "md5";
-import { loginData } from "@/api/data.ts";
+import { loginData } from "@/api/data";
 
 const router = useRouter();
 const userStore = useUserStore();

@@ -158,7 +158,7 @@ timer = setInterval(() => {
 
 onBeforeUnmount(() => {
   window.removeEventListener("resize", resize);
-  clearInterval(timer!);
+  clearInterval(timer as any);
 });
 </script>
 <style lang="scss" scoped>
